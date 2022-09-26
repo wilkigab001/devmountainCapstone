@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./\index.css">
+    <link rel="stylesheet" href="./index.css">
     <title>Trails Ranked</title>
 </head>
 <body>
@@ -23,10 +23,44 @@
     </nav>
     <div>
         <p>
-            Welcome to the Trail Ranker! Here you can enter all your trails you have ridden lately and rank them according to how you feel about them. Add some info about each trail, if you liked them or not, along with anything else you think might be important to know for future reference!
+            In this page feel free to input the information about your favorite and least favorite trails. You will be adding a ranking out of 5, the name and location of the trail. The length of the trail, whether or not you liked it. And if you have a picture, you will drop a link to it so it will be displayed on the page. Hopefully to help you remember your ride easier! There are five trails already placed from here in utah county that you should update and change to your liking!
         </p>
     </div>
 
+    <div>
+        <form id="textInputs">
+            <input type="text" id="trailName" placeholder="Enter name of trail"><br><br>
+
+            <input type="text" id="trailLength" placeholder="Length of trail"><br><br>
+
+            <input type="text" id="trailLocation" placeholder="Where's the trail at?"><br><br>
+
+            <input type="checkbox" id="didJaLikeIt" name="didJaLikeIt" value="false">
+            <label for="didJaLikeIt">Did you like it?</label><br>
+            
+        </form>
+        <form id="radioBtns">
+            <label for="radioBtns">
+                <h3>
+                    What do you rank this trail?
+                </h3>
+            </label>
+            <input type="radio" id="1" name="1" value="1">
+            <label for="1">1</label><br>
+            <input type="radio" id="2" name="2" value="2">
+            <label for="1">2</label><br>
+            <input type="radio" id="3" name="3" value="3">
+            <label for="1">3</label><br>
+            <input type="radio" id="4" name="4" value="4">
+            <label for="1">4</label><br>
+            <input type="radio" id="5" name="5" value="5">
+            <label for="1">5</label><br>
+        </form>
+        <br>
+        <button type="submit">Submit</button>
+    </div>
+
+    <section></section>
     <script src="./index.js"></script>
 </body>
 </html>

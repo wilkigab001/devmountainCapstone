@@ -1,0 +1,41 @@
+[
+    {
+        "trailName": "DeadWood",
+        "trailLength": "2 miles",
+        "trailLocation": "Eagle Mountain, Utah",
+        "likeIt": true,
+        "ranking": 5
+    },
+
+    {
+        "trailName": "SuperSonic",
+        "trailLength": "1 miles",
+        "trailLocation": "Eagle Mountain, Utah",
+        "likeIt": false,
+        "ranking": 2
+    },
+
+    {
+        "trailName": "Provo River Parkway",
+        "trailLength": "9 miles",
+        "trailLocation": "Provo, Utah",
+        "likeIt": true,   
+        "ranking": 4
+    },
+
+    {   
+        "trailName": "Sheep Creek",
+        "trailLength": "6 miles",
+        "trailLocation": "Spanish Fork Canyon, Utah",
+        "likeIt": true,
+        "ranking": 3
+    },
+
+    {
+        "trailName": "Adrenaline",
+        "trailLength": ".5 miles",
+        "trailLocation": "Pleasant Grove, Utah",
+        "likeIt": true,
+        "ranking": 4
+    }
+]
