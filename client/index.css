@@ -7,3 +7,7 @@ nav li {
     padding: 20px;
     text-align: center;
 }
+
+nav ul {
+    text-align: center;
+}

@@ -11,7 +11,14 @@ const port = process.env.PORT || 4000
 app.use(express.json())
 app.use(cors())
 
-const controller = require('./controller');
+const controller = require('./controller')
+const {showTrails, addTrail} = controller
+
+
+//app.get('/client/trails.html/trails', showTrails())
+app.post('/client/trails.html', addTrail())
+//app.put('/client/trails.html', changeTrail()
+//app.delete('/client/trails.html', deleteTrail())
 
 
 app.listen(port, () => {
