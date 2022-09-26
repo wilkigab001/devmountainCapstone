@@ -12,7 +12,7 @@ app.use(express.json())
 app.use(cors())
 
 const controller = require('./controller')
-const {showTrails, addTrail} = controller
+const {showTrails, addTrail, changeTrail, deleteTrail} = controller
 
 
 //app.get('/client/trails.html/trails', showTrails())

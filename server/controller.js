@@ -7,5 +7,13 @@ module.exports = {
 
     addTrail: (req,res) => {
         console.log(req.body)
+    },
+
+    changeTrail: (req, res) => {
+
+    },
+    
+    deleteTrail: (req, res) => {
+    
     }
 }
