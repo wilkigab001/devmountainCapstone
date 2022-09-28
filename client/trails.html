@@ -9,15 +9,12 @@
 </head>
 <body>
     <header>
-        <h1>Ranking the Trails</h1>
+        <h1>Ranking your Trails</h1>
     </header>
     <nav>
         <ul>
             <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="trails.html">Trails</a>
+                <a href="/trails.html">Trails</a>
             </li>
         </ul>
     </nav>
@@ -27,7 +24,7 @@
         </p>
     </div>
 
-    <div>
+    <form>
         <form id="textInputs">
             <input type="text" id="trailName" placeholder="Enter name of trail"><br><br>
 
@@ -35,8 +32,8 @@
 
             <input type="text" id="trailLocation" placeholder="Where's the trail at?"><br><br>
 
-            <input type="checkbox" id="didJaLikeIt" name="didJaLikeIt" value="false">
-            <label for="didJaLikeIt">Did you like it?</label><br>
+            Did you like it: <input type="checkbox" id="didJaLikeIt" name="didJaLikeIt" value="false">
+            
             
         </form>
         <form id="radioBtns">
@@ -45,22 +42,24 @@
                     What do you rank this trail?
                 </h3>
             </label>
-            <input type="radio" id="1" name="1" value="1">
-            <label for="1">1</label><br>
-            <input type="radio" id="2" name="2" value="2">
-            <label for="1">2</label><br>
-            <input type="radio" id="3" name="3" value="3">
-            <label for="1">3</label><br>
-            <input type="radio" id="4" name="4" value="4">
-            <label for="1">4</label><br>
-            <input type="radio" id="5" name="5" value="5">
-            <label for="1">5</label><br>
+            1 <input type="radio" id="1" class="radioBtn" name="1" value="1">
+            <br>
+            2 <input type="radio" id="2" class="radioBtn" name="2" value="2">
+            <br>
+            3 <input type="radio" id="3" class="radioBtn" name="3" value="3">
+            <br>
+            4 <input type="radio" id="4" class="radioBtn" name="4" value="4">
+            <br>
+            5 <input type="radio" id="5" class="radioBtn" name="5" value="5">
+            <br>
         </form>
         <br>
         <button type="submit">Submit</button>
-    </div>
+    </form>
+    <button id="submit" onclick="getTrails()">TRAILS!</button>
 
-    <section></section>
+    <section id="trailDisplay"></section>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>

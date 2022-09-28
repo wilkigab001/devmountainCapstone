@@ -11,3 +11,8 @@ nav li {
 nav ul {
     text-align: center;
 }
+
+.radioBtn {
+    display: inline;
+    text-align: center;
+}

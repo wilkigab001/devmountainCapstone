@@ -4,7 +4,8 @@
         "trailLength": "2 miles",
         "trailLocation": "Eagle Mountain, Utah",
         "likeIt": true,
-        "ranking": 5
+        "ranking": 5,
+        "id": 1
     },
 
     {
@@ -12,7 +13,8 @@
         "trailLength": "1 miles",
         "trailLocation": "Eagle Mountain, Utah",
         "likeIt": false,
-        "ranking": 2
+        "ranking": 2,
+        "id": 2
     },
 
     {
@@ -20,7 +22,8 @@
         "trailLength": "9 miles",
         "trailLocation": "Provo, Utah",
         "likeIt": true,   
-        "ranking": 4
+        "ranking": 4,
+        "id": 3
     },
 
     {   
@@ -28,7 +31,8 @@
         "trailLength": "6 miles",
         "trailLocation": "Spanish Fork Canyon, Utah",
         "likeIt": true,
-        "ranking": 3
+        "ranking": 3,
+        "id": 4
     },
 
     {
@@ -36,6 +40,7 @@
         "trailLength": ".5 miles",
         "trailLocation": "Pleasant Grove, Utah",
         "likeIt": true,
-        "ranking": 4
+        "ranking": 4,
+        "id": 5
     }
 ]
