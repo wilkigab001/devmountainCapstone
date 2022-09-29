@@ -24,9 +24,9 @@ app.post('/addTrails', addTrail)
 app.delete('/deleteTrail/:id', deleteTrail)
 app.put('/changeTrailRating/:id', changeTrail)
 
-//app.get('/changeTrailName/:id', changeTrailName)
+//app.put('/changeTrailName/:id', changeTrailName)
 
 
 app.listen(4567, () => {
-    console.log('Justice league just got their ass kicked on port ' + 4567)
+    console.log('Justice league just got their butts kicked on port ' + 4567)
 })

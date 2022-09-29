@@ -17,6 +17,7 @@ module.exports = {
             ranking: ranking,
             id: id
         }
+        console.log(trailObject)
 
         trails.push(trailObject)
 
@@ -29,17 +30,13 @@ module.exports = {
         const index = trails.findIndex(el => el.id === +req.params.id)
         const {type} = req.body
         if(type === 'minus' && trails[index].ranking > 1){
-            trails[index].ranking -= 1
-            res.status(200).send(trails)
+            trails[index].ranking--
         }else if(type === 'plus' && trails[index].ranking < 5){
-            trails[index].ranking += 1
-            res.status(200).send(trails)
+            trails[index].ranking++
         }else{
             res.status(400).send('Your rating is to low or to high. It cannot be better than 5 or worse than 1')
         }
-
-
-
+        res.status(200).send(trails)
     },
     
     deleteTrail: (req, res) => {
@@ -48,10 +45,13 @@ module.exports = {
         trails.splice(index, 1)
         
         res.status(200).send(trails)
-    } 
+    }
     
     // changeTrailName: (req,res) => {
-    //    const index = trails.findIndex(el => el.id === +req.params.id)
+    //     const index = trails.findIndex(el => el.id === +req.params.id)
+    //     const {name} = req.body
+    //     trails[index].trailName === name
 
+    //     res.status(200).send(trails)
     // }
 }
