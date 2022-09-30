@@ -12,11 +12,6 @@ const displayTrails = (array) => {
     for(i = 0; i < array.length; i++) {
         createTrailCard(array[i])
     }
-    const hideTrails = document.createElement('section')
-    hideTrails.innerHTML = `<button>Hide Trails</button>
-    <a href='https://www.trailforks.com/region/utah-county/'><button>Find more trails nearby</button></a>`
-    hideTrailBtn.appendChild(hideTrails)
-    hideTrails.addEventListener('click', hideAllTrails)
 }
 
 const createTrailCard = (trail) => {
@@ -38,6 +33,11 @@ const createTrailCard = (trail) => {
     trailDisplay.appendChild(trailCard)
 }
 const getTrails = () => {
+    const hideTrails = document.createElement('section')
+    hideTrails.innerHTML = `<button>Hide Trails</button>
+    <a href='https://www.trailforks.com/region/utah-county/'><button>Find more trails nearby</button></a>`
+    hideTrailBtn.appendChild(hideTrails)
+    hideTrails.addEventListener('click', hideAllTrails)
     axios.get(`${baseURL}/showTrails`)
     .then((response) => {
         displayTrails(response.data)
@@ -129,7 +129,11 @@ const createTrail = (event) => {
 const hideAllTrails = () => {
     trailDisplay.innerHTML = ''
     hideTrailBtn.innerHTML = ''
+    trailsBtn.style.display = 'inline'
 }
 
 trailsBtn.addEventListener('click', getTrails)
 inputs.addEventListener('submit', createTrail)
+trailsBtn.addEventListener('click', () => {
+    trailsBtn.style.display = 'none'
+})
