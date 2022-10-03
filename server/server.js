@@ -23,6 +23,7 @@ app.get('/showTrails', showTrails)
 app.post('/addTrails', addTrail)
 app.delete('/deleteTrail/:id', deleteTrail)
 app.put('/changeTrailRating/:id', changeTrail)
+app.put('/changeTrailName/:id', changeTrailName)
 
 //app.put('/changeTrailName/:id', changeTrailName)
 
