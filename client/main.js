@@ -4,6 +4,9 @@ const trailDisplay = document.querySelector('#trailDisplay')
 const trailsBtn = document.querySelector('#submit')
 const hideTrailBtn = document.querySelector('#hideTrailBtn')
 const inputs = document.querySelector('#allInputs')
+let editButton = document.querySelector('.modal-button')
+let modalBg = document.querySelector('.modal-bg')
+let modalClose = document.querySelector('.modal-close')
 
 //Axios request to get trails array
 //loop over that array
@@ -27,7 +30,22 @@ const createTrailCard = (trail) => {
     <button onclick="trailRating(${trail.id}, 'plus')">Increase</button>
     <button onclick="trailRating(${trail.id}, 'minus')">Decrease</button>
     <button onclick="deleteTrail(${trail.id})")>delete</button> 
-    <button>Edit Trail</button>
+    <button class="edit-button">MOdal Trail</button>
+    <div class="modal-bg">
+        <div class="modal-content">
+            <h2>Edit your Trail</h2>
+            <label for:"name">Trail Name:</label>
+            <input type="text">
+            <label for:"length">Trail Length:</label>
+            <input type="text">
+            <label for:"location">Trail Location:</label>
+            <input type="text">
+            <label for:"likeIt">Enjoyable?</label>
+            <input type="checkbox" id="didJaLikeIt" name="didJaLikeIt" value="false">
+            <button> Save </button>
+            <span class="modal-close"> X </span>
+        </div>
+    </div>
     <br><br>
     `
     trailDisplay.appendChild(trailCard)
@@ -136,4 +154,10 @@ trailsBtn.addEventListener('click', getTrails)
 inputs.addEventListener('submit', createTrail)
 trailsBtn.addEventListener('click', () => {
     trailsBtn.style.display = 'none'
+})
+editButton.addEventListener('click', () => {
+    modalBg.classList.add('bg-active')
+})
+modalClose.addEventListener('click', () => {
+    modalBg.classList.remove('bg-active')
 })

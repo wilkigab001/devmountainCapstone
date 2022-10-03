@@ -1,0 +1,37 @@
+[
+    {
+        "bike":"Marlin 5", 
+        "maker": "Trek",
+        "tireSize":"29 Inch",
+        "hardTail":true,
+        "price":"740",
+        "img":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.trekbikes.com%2Fus%2Fen_US%2Fbikes%2Fmountain-bikes%2Fcross-country-mountain-bikes%2Fmarlin%2Fmarlin-5-gen-2%2Fp%2F34587%2F&psig=AOvVaw3_uMETdbPg1YoR8Pq0mDt8&ust=1664905067254000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCND_2urMxPoCFQAAAAAdAAAAABAJ"
+    },
+
+    {
+        "bike":"Atroz 2", 
+        "maker": "DiamondBack",
+        "tireSize":"27.5 inches",
+        "hardTail":false,
+        "price":"1099",
+        "img":"https://www.bikesdirect.com/products/diamondback-bicycles/diamondback-mountain-bikes/atroz2-3q-blk-21.jpg"
+    },
+
+    {
+        "bike":"2022 Siskiu D5", 
+        "maker": "Polygon",
+        "tireSize":"27.5",
+        "hardTail":false,
+        "price":"849",
+        "img":"https://www.bikesonline.com/assets/full/SISKIU_D5_2022.jpg?20210713225156"
+    },
+    
+    {
+        "bike":"Farley 9.6", 
+        "maker": "Trek",
+        "tireSize":"27.5",
+        "hardTail":true,
+        "price":"3699.99",
+        "img":"https://trek.scene7.com/is/image/TrekBicycleProducts/Farley96_23_37020_A_Portrait?$responsive-pjpg$&cache=on,on&wid=1920&hei=1440"
+    }
+]
