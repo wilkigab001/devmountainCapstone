@@ -67,7 +67,7 @@ const getTrails = () => {
     <a href='https://www.trailforks.com/region/utah-county/'><button>Find more trails nearby</button></a>`
     hideTrailBtn.appendChild(hideTrails)
     hideTrails.addEventListener('click', hideAllTrails)
-    axios.get(`${baseURL}/showTrails`)
+    axios.get(`/showTrails`)
     .then((response) => {
         displayTrails(response.data)
         console.log(response)
@@ -78,7 +78,7 @@ const getTrails = () => {
 }
 
 const deleteTrail = (id) => {
-    axios.delete(`${baseURL}/deleteTrail/${id}`)
+    axios.delete(`/deleteTrail/${id}`)
     .then((response) => {
         trailDisplay.innerHTML =''
         displayTrails(response.data)
@@ -90,7 +90,7 @@ const deleteTrail = (id) => {
 }
 
 const trailRating = (id, type) => {
-    axios.put(`${baseURL}/changeTrailRating/${id}`, {type: type})
+    axios.put(`/changeTrailRating/${id}`, {type: type})
     .then((response) => {
         trailDisplay.innerHTML =''
         displayTrails(response.data)
@@ -118,7 +118,7 @@ const createTrail = (event) => {
         ranking: radioBtns.value
     }
     
-    axios.post(`${baseURL}/addTrails`, newTrail)
+    axios.post(`/addTrails`, newTrail)
     .then((res) => {
         trailDisplay.innerHTML = ''
         trailName.value = ''
@@ -163,7 +163,7 @@ const updateTrails = (id) => {
     }
     console.log(id)
 
-    axios.put(`${baseURL}/changeTrailName/${id}`, updatedTrail )
+    axios.put(`/changeTrailName/${id}`, updatedTrail )
     .then((res) => {
         trailDisplay.innerHTML = ''
         newName.value = ''
