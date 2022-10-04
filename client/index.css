@@ -95,19 +95,6 @@ img {
 }
 
 
-#finalBtn, #submitBtn {
-text-align: center;
-align-content: center;
-}
-
-
-
-
-
-
-
-
-
 button{
   font-family: sans-serif;
   font-size: 16px;
@@ -176,4 +163,18 @@ span{
     padding-top: 15px;
     font-size:larger;
 }
+
+#finalBtn, #submitBtn {
+text-align: center;
+align-content: center;
+}
+
+
+
+
+
+
+
+
+
 
