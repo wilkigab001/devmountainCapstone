@@ -1,15 +1,18 @@
 const express = require('express')
 const cors = require('cors')
+
 require('dotenv').config()
+
 const path = require('path')
-
-const app = express()
-
-//require('dotenv').config()
 
 const port = process.env.PORT || 4000
 
+const app = express()
+
+
+
 app.use(express.json())
+app.use(express.static('client'))
 app.use(cors())
 
 app.use('/', express.static(path.join(__dirname, '../client/trails.html')))
