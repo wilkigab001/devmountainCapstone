@@ -16,7 +16,7 @@ app.use('/', express.static(path.join(__dirname, '../client/trails.html')))
 app.use(express.static(path.join(__dirname, '../client')))
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/index.html'))
+    res.sendFile(path.join(__dirname, '../client/trails.html'))
 })
 
 app.get('/js/', (req, res) => {
@@ -24,7 +24,7 @@ app.get('/js/', (req, res) => {
 })
 
 app.get('/css/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/main.css'))
+    res.sendFile(path.join(__dirname, '../client/index.css'))
 })
 
 
