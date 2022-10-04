@@ -1,9 +1,10 @@
 let trails = require('./db.json')
+
 let id = 6
 
 module.exports = {
     showTrails: (req, res) => {
-        console.log(trails)
+        console.log('showTrails')
         res.status(200).send(trails)
     },
 
