@@ -3,18 +3,7 @@ let id = 6
 
 module.exports = {
     showTrails: (req, res) => {
-        let trailsRanked = []
-        for (let i = 0; i < trails.length; i++) {
-            if(i === 0) {
-                trailsRanked.push(trails[i])
-            }
-            if(trails[i].ranking > trailsRanked[i].ranking){
-                trailsRanked.unshift(trails[i])
-            }else{
-                trailsRanked.push(trails[i])
-            }
-        }
-        res.status(200).send(trailsRanked)
+        res.status(200).send(trails)
     },
 
     addTrail: (req,res) => {
@@ -67,18 +56,17 @@ module.exports = {
     // }
 
     changeTrailName: (req, res) => {
-        const index = trails.findIndex(el => el.id === +req.params.id)
         const {newName, newLength, newLocation, newLikeIt} = req.body
-        trails[index] = {
+        const index = trails.findIndex(el => el.id === +req.params.id)
+        let updatedTrails = {
             trailName: newName || trails[index].trailName,
             trailLength: newLength || trails[index].trailLength,
             trailLocation: newLocation || trails[index].trailLocation,
             likeIt: newLikeIt || trails[index].likeIt,
-            ranking: trails[index].ranking,
-            id: trails[index].id
+            ranking: trails[index].ranking
         }
 
-        console.log(trails[index])
+        trails.splice(index, 1, updatedTrails)
         res.status(200).send(trails)
 
     }

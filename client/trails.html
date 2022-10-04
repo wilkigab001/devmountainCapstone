@@ -66,6 +66,23 @@
         <button id="submit" class="button">TRAILS!</button>
 
         <section id="trailDisplay"></section>
+        <form id="modalForm">
+            <div class="modal">
+                <div class="modal-content">
+                    <h2>Edit your Trail</h2>
+                    Trail Name:
+                    <input type="text" id="newName">
+                    Trail Length:
+                    <input type="text" id="newLength">
+                    Trail Location:
+                    <input type="text" id="newLocation">
+                    <label for:"likeIt">Enjoyable?</label>
+                    <input type="checkbox" id="newLikeIt" name="didJaLikeIt" value="false">
+                    <button> Save </button>
+                    <span class="modal-close"> X </span>
+                </div>
+            </div>
+        </form>
         <section id="hideTrailBtn"></section>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="./main.js"></script>

@@ -4,7 +4,9 @@ const trailDisplay = document.querySelector('#trailDisplay')
 const trailsBtn = document.querySelector('#submit')
 const hideTrailBtn = document.querySelector('#hideTrailBtn')
 const inputs = document.querySelector('#allInputs')
+const modalBg = document.querySelector('.modal')
 
+let trailToEdit = null
 
 //Axios request to get trails array
 //loop over that array
@@ -13,6 +15,12 @@ const displayTrails = (array) => {
     for(i = 0; i < array.length; i++) {
         createTrailCard(array[i])
     }
+    const modalClose = document.querySelector('.modal-close')
+    
+    
+    modalClose.addEventListener('click', () => {
+        modalBg.classList.remove('bg-active')
+    })
 }
 
 const createTrailCard = (trail) => {
@@ -21,51 +29,35 @@ const createTrailCard = (trail) => {
     
     trailCard.innerHTML = `
     <div class="trail-card-content">
-        <p>${trail.trailName}</p>
-        <p>${trail.trailLength}</p>
-        <p>${trail.trailLocation}</p>
-        <p>Enjoyable? ${trail.likeIt}</p>
-        <p>${trail.ranking} / 5 stars</p>
-        <button onclick="trailRating(${trail.id}, 'plus')">Increase</button>
-        <button onclick="trailRating(${trail.id}, 'minus')">Decrease</button>
-        <button onclick="deleteTrail(${trail.id})")>delete</button>
-        <button class="edit-button">MOdal Trail</button>
-        <form id="modalForm">
-            <div class="modal">
-                <div class="modal-content">
-                    <h2>Edit your Trail</h2>
-                    <label for:"name">Trail Name:</label>
-                    <input type="text" id="newName">
-                    <label for:"length">Trail Length:</label>
-                    <input type="text" id="newLength">
-                    <label for:"location">Trail Location:</label>
-                    <input type="text" id="newLocation">
-                    <label for:"likeIt">Enjoyable?</label>
-                    <input type="checkbox" id="newLikeIt" name="didJaLikeIt" value="false">
-                    <button> Save </button>
-                    <span class="modal-close"> X </span>
-                </div>
-            </div>
-        </form>
+    <p>${trail.trailName}</p>
+    <p>${trail.trailLength}</p>
+    <p>${trail.trailLocation}</p>
+    <p>Enjoyable? ${trail.likeIt}</p>
+    <p>${trail.ranking} / 5 stars</p>
+    <button onclick="trailRating(${trail.id}, 'plus')">Increase</button>
+    <button onclick="trailRating(${trail.id}, 'minus')">Decrease</button>
+    <button onclick="deleteTrail(${trail.id})")>delete</button>
+    <button class="edit-button">Modal Trail</button>
     </div>
     <br><br>
     `
     trailDisplay.appendChild(trailCard)
+    
+    const editButtons = document.querySelectorAll('.edit-button')
 
-    const editButton = document.querySelector('.edit-button')
-    const modalBg = document.querySelector('.modal')
-    const modalClose = document.querySelector('.modal-close')
-    const modalForm = document.querySelector('#modalForm')
-
-
+    const editButton = editButtons[editButtons.length - 1]    
     editButton.addEventListener('click', () => {    
+        trailToEdit = trail.id
         modalBg.classList.add('bg-active')
     })
-    modalClose.addEventListener('click', () => {
-        modalBg.classList.remove('bg-active')
-    })
-    modalForm.addEventListener('click', updateTrails)
 }
+const modalForm = document.querySelector('#modalForm')
+
+modalForm.addEventListener('submit', (event) => {
+    event.preventDefault()
+    updateTrails(trailToEdit)
+})
+
 const getTrails = () => {
     const hideTrails = document.createElement('section')
     hideTrails.innerHTML = `<button>Hide Trails</button>
@@ -148,13 +140,17 @@ const hideAllTrails = () => {
     trailDisplay.innerHTML = ''
     hideTrailBtn.innerHTML = ''
     trailsBtn.style.display = 'inline'
+    editButton.style.display = 'none'
 }
 
 const updateTrails = (id) => {
+
     const newName = document.querySelector("#newName")
     const newLength = document.querySelector("#newLength")
     const newLocation = document.querySelector("#newLocation")
     const newLikeIt = document.querySelector("#newLikeIt")
+    const modalBg = document.querySelector('.modal')
+
 
     let updatedTrail = {
         newName: newName.value,
@@ -162,6 +158,8 @@ const updateTrails = (id) => {
         newLocation: newLocation.value,
         newLikeIt: newLikeIt.checked
     }
+    console.log(id)
+
     axios.put(`${baseURL}/changeTrailName/${id}`, updatedTrail )
     .then((res) => {
         trailDisplay.innerHTML = ''
@@ -171,6 +169,7 @@ const updateTrails = (id) => {
         newLikeIt.checked = false
         displayTrails(res.data)
         console.log(res.data)
+        modalBg.classList.remove('bg-active')
     })
     .catch(err => console.log(err))
 }
