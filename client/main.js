@@ -29,15 +29,18 @@ const createTrailCard = (trail) => {
     
     trailCard.innerHTML = `
     <div class="trail-card-content">
+    <h3> Trail: </h3>
     <p>${trail.trailName}</p>
     <p>${trail.trailLength}</p>
     <p>${trail.trailLocation}</p>
     <p>Enjoyable? ${trail.likeIt}</p>
     <p>${trail.ranking} / 5 stars</p>
+    <div id="buttonContainer">
     <button onclick="trailRating(${trail.id}, 'plus')">Increase</button>
     <button onclick="trailRating(${trail.id}, 'minus')">Decrease</button>
     <button onclick="deleteTrail(${trail.id})")>delete</button>
-    <button class="edit-button">Modal Trail</button>
+    <button class="edit-button">Edit Trail</button>
+    </div>
     </div>
     <br><br>
     `

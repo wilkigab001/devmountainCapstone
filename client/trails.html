@@ -14,56 +14,52 @@
         </header>
     </div>
     <main>
-        <nav>
-            <ul>
-                <li>
-                    <a href="trails.html">Trails</a>
-                </li>
-                <li>
-                    <a href="calculator.html">Ride Calculator</a>
-                </li>
-            </ul>
-        </nav>
-        <div>
-            <p>
-                In this page feel free to input the information about your favorite and least favorite trails. You will be adding a ranking out of 5, the name and location of the trail. The length of the trail, whether or not you liked it. And if you have a picture, you will drop a link to it so it will be displayed on the page. Hopefully to help you remember your ride easier! There are five trails already placed from here in utah county that you should update and change to your liking!
-            </p>
-        </div>
+            <div id="paragraphContainer">
+                <p>
+                    In this page feel free to input the information about your favorite and least favorite trails. You will be adding a ranking out of 5, the name and location of the trail. The length of the trail, whether or not you liked it. And if you have a picture, you will drop a link to it so it will be displayed on the page. Hopefully to help you remember your ride easier! There are five trails already placed from here in utah county that you should update and change to your liking!
+                </p>
+            </div>
+            <div id="content-container">
+                <div id="container">
+                    <form id="allInputs">
+                        <h2>Create Trail</h2>
+                            <input type="text" id="trailName" placeholder="Enter name of trail"><br><br>
 
-        <div id="container">
-            <form id="allInputs">
-                    <input type="text" id="trailName" placeholder="Enter name of trail"><br><br>
+                            <input type="text" id="trailLength" placeholder="Length of trail"><br><br>
 
-                    <input type="text" id="trailLength" placeholder="Length of trail"><br><br>
+                            <input type="text" id="trailLocation" placeholder="Where's the trail at?"><br><br>
 
-                    <input type="text" id="trailLocation" placeholder="Where's the trail at?"><br><br>
-
-                    Did you like it: <input type="checkbox" id="didJaLikeIt" name="didJaLikeIt" value="false">
-                    
-                
-                    <label for="radioBtns">
-                        <h3>
-                            What do you rank this trail?
-                        </h3>
-                    </label>
-                    <section id="radioBtns" name="radioBtns">
-                        1 <input type="radio" id="1" class="radioBtn" name="radio" value="1">
+                            Did you like it: <input type="checkbox" id="didJaLikeIt" name="didJaLikeIt" value="false">
+                            
+                        
+                            <label for="radioBtns">
+                                <h3>
+                                    What do you rank this trail?
+                                </h3>
+                            </label>
+                        <div id="radioBtsContainer">    
+                            <section id="radioBtns" name="radioBtns">
+                                1 <input type="radio" id="1" class="radioBtn" name="radio" value="1">
+                                <br>
+                                2 <input type="radio" id="2" class="radioBtn" name="radio" value="2">
+                                <br>
+                                3 <input type="radio" id="3" class="radioBtn" name="radio" value="3">
+                                <br>
+                                4 <input type="radio" id="4" class="radioBtn" name="radio" value="4">
+                                <br>
+                                5 <input type="radio" id="5" class="radioBtn" name="radio" value="5">
+                                <br>
+                            </section>
+                        </div>
                         <br>
-                        2 <input type="radio" id="2" class="radioBtn" name="radio" value="2">
-                        <br>
-                        3 <input type="radio" id="3" class="radioBtn" name="radio" value="3">
-                        <br>
-                        4 <input type="radio" id="4" class="radioBtn" name="radio" value="4">
-                        <br>
-                        5 <input type="radio" id="5" class="radioBtn" name="radio" value="5">
-                        <br>
-                    </section>
-                <br>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-        
-        <button id="submit" class="button">TRAILS!</button>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div id="photo"><img src="https://images.unsplash.com/photo-1511994298241-608e28f14fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="Mountain Bike"></div>
+            </div>
+        <div id="submitBtn">
+            <button id="submit" class="button">TRAILS!</button>
+        </div>    
 
         <section id="trailDisplay"></section>
         <form id="modalForm">
@@ -83,7 +79,9 @@
                 </div>
             </div>
         </form>
-        <section id="hideTrailBtn"></section>
+        <div id="finalBtn">
+            <section id="hideTrailBtn"></section>
+        </div>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="./main.js"></script>
     </main>    
