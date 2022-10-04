@@ -3,6 +3,7 @@ let id = 6
 
 module.exports = {
     showTrails: (req, res) => {
+        console.log(trails)
         res.status(200).send(trails)
     },
 
