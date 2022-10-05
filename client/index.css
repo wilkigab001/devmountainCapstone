@@ -1,7 +1,7 @@
 
 * {
     margin: 0;
-    padding:5px;
+    padding: 2px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
@@ -27,31 +27,33 @@ main{
     margin: 0 auto;
     background-color: #CECECE;
     opacity: 1;
+    justify-content: center;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 10px;
 }
 
 #content-container {
-    size: auto;
-    float: left;
-    box-sizing: border-box;
-}
-
-#allInputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     text-align: center;
+    align-items: center;
 }
 
 img {
-    width: 50%;
+    display: flex;
+    width: 400px;
     height: 50%;
     border-radius: 25px;
-    border: 3px solid lightgrey;
+    border: 1 solid black;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
+
 #radioBtns {
-    display: inline;  
-    
-}
-#radioBtsContainer {
-    width: 85%;
+    display: inline;
+    padding-bottom: 3px;
+    padding-top: 3px;
 }
 
 #buttonContainer {
@@ -63,35 +65,38 @@ img {
 }
 
 
-#container {
+#allInputs {
     color: #272635;
     height:400px;
     width: 250px;
     background-color: white;
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: center;
-    align-items: center;
     border: 3px solid black;
     border-radius: 25px;
     margin: 0 auto;
     padding: 20px;
+    text-align: center;
 }
-#trailDisplay{
-    display: inline-block;
-    padding: 20px;
+
+#trailDisplay {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
 }
 
 .trail-card-content{
-    background-color: blanchedalmond;
+    background-color: #E8E9F3;
     width: 200px;
+    height: 275px;
+    border-radius: 25px;
     margin: 20px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     border-radius: 12px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid black;
 }
 
 
@@ -104,7 +109,8 @@ button{
   color: #000;
   cursor: pointer;
   border: 3px solid;
-  padding: 0.25em 0.5em;
+  padding: auto;
+  margin: 1px;
   box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
   position: relative;
   user-select: none;
@@ -126,7 +132,6 @@ button{
     justify-content: center;
     align-items: center;
     display: none;
-
 }
 
 
@@ -147,7 +152,7 @@ button{
 }
 
 .bg-active{
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
     opacity: 1;
