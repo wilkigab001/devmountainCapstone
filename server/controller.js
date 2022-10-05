@@ -65,7 +65,8 @@ module.exports = {
             trailLength: newLength || trails[index].trailLength,
             trailLocation: newLocation || trails[index].trailLocation,
             likeIt: newLikeIt || trails[index].likeIt,
-            ranking: trails[index].ranking
+            ranking: trails[index].ranking,
+            id: trails[index].id
         }
 
         trails.splice(index, 1, updatedTrails)
