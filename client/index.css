@@ -10,6 +10,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Montserrat', sans-serif;
+    color: #736565;
 }
 header{
     text-align: center;
@@ -17,8 +18,7 @@ header{
     width: 100%;
     padding: 10px;
     margin: 0 auto;
-    background-color: #E8E9F3;
-    color: #272635;
+    background-color: #0D0000;
 }
 
 main{
@@ -138,6 +138,7 @@ button{
 .modal-content{
     position: relative;
     font-family: 'Montserrat', sans-serif;
+    font-weight: Bold;
     background-color: #E8E9F3;
     color: #272635;
     width: 30%;
