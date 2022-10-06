@@ -4,12 +4,13 @@ let id = 6
 
 module.exports = {
     showTrails: (req, res) => {
-        console.log('showTrails')
+        console.log('trails again')
         res.status(200).send(trails)
     },
 
     addTrail: (req,res) => {
         const{trailName, trailLength, trailLocation, likeIt, ranking} = req.body
+        console.log('trails added')
  
         let trailObject = {
             trailName: trailName,

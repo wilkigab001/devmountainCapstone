@@ -157,9 +157,6 @@ button{
     justify-content: center;
     align-items: center;
     opacity: 1;
-    animation: ease-in;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
 }
 
 span{

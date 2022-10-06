@@ -6,7 +6,7 @@ const path = require('path')
 
 const cors = require('cors')
 
-const port = process.env.PORT 
+const port = process.env.PORT || 4567
 
 const app = express()
 
