@@ -15,6 +15,7 @@ const displayTrails = (array) => {
     for(i = 0; i < array.length; i++) {
         createTrailCard(array[i])
     }
+
     const modalClose = document.querySelector('.modal-close')
     
     

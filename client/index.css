@@ -1,7 +1,6 @@
 
 * {
     margin: 0;
-    padding: 2px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
@@ -10,7 +9,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Montserrat', sans-serif;
-    color: #736565;
+    color: #3D5E73;
 }
 header{
     text-align: center;
@@ -21,12 +20,14 @@ header{
     background-color: #0D0000;
 }
 
+
+
 main{
     width: 80%;
     height: 100%;
     margin: 0 auto;
     background-color: #CECECE;
-    opacity: 1;
+    opacity: .9;
     justify-content: center;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -111,7 +112,6 @@ button{
   border: 3px solid;
   padding: auto;
   margin: 1px;
-  box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
   position: relative;
   user-select: none;
   -webkit-user-select: none;
@@ -157,6 +157,9 @@ button{
     justify-content: center;
     align-items: center;
     opacity: 1;
+    animation: ease-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 span{
