@@ -116,7 +116,7 @@ const createTrail = (event) => {
         trailLength: trailLength.value,
         trailLocation: trailLocation.value,
         likeIt: didJaLikeIt.checked,
-        ranking: radioBtns.value
+        ranking: radioBtns.checked
     }
     
     axios.post(`/addTrails`, newTrail)
